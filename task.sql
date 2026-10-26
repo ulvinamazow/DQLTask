@@ -77,3 +77,50 @@ select * from books
 order by price 
 limit 3 offset 2;
 
+
+
+
+
+-- Yeni task
+
+create table films(
+	id integer,
+	name text,
+	genre text,
+	raiting numeric(5, 2),
+	duration numeric(4, 3),
+	release_year integer
+);
+
+insert into films(id, name, genre, raiting, duration, release_year) values
+(1, 'Inception', 'Sci-Fi', 8.80, 2.483, 2010),
+(2, 'The Godfather', 'Crime', 9.20, 2.916, 1972),
+(3, 'The Dark Knight', 'Action', 9.00, 2.533, 2008),
+(4, 'Interstellar', 'Sci-Fi', 8.70, 2.749, 2014),
+(5, 'Parasite', 'Thriller', 8.50, 2.216, 2019);
+
+
+select * from films;
+
+select id, raiting from films;
+
+select * from films where genre = 'dram';
+
+select * from films where raiting > 8;
+
+select * from films where release_year > 2020;
+
+select * from films order by raiting desc;
+
+select * from films order by raiting asc;
+
+select * from films order by name asc;
+
+select * from films order by raiting asc limit 3;
+
+select * from films where duration > 1.200;
+
+select * from films where in ('dram', 'komediya', 'qorxu');
+
+
+
